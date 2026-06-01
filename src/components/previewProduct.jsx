@@ -7,7 +7,7 @@ import {  useParams } from "react-router-dom"
 export function PreviewProduct(){
     let params = useParams()
     const [product,setProduct] = useState([])
-
+    const[cartItems] = []
     useEffect(()=>{
         axios.get(`https://fakestoreapi.com/products/${params.id}`)
         .then(res=>{
