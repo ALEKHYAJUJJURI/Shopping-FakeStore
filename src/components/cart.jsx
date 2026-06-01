@@ -1,7 +1,7 @@
-import { useState } from "react"
+
 
 export function CartProducts(){
-    const [items,setItems] = useState([])
+    
     
     
     return(

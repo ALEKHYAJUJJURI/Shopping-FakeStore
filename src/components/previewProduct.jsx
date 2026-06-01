@@ -1,13 +1,13 @@
 
 import axios from "axios"
 import { useEffect, useState } from "react"
-import { Link, useParams } from "react-router-dom"
-import { CartProducts } from "./cart"
+import {  useParams } from "react-router-dom"
+
 
 export function PreviewProduct(){
     let params = useParams()
     const [product,setProduct] = useState([])
-    const[cartItems,setCartItems] = useState([])
+
     useEffect(()=>{
         axios.get(`https://fakestoreapi.com/products/${params.id}`)
         .then(res=>{
