@@ -14,7 +14,7 @@ export function PreviewProduct(){
             setProduct(res.data)
             console.log(res.data)
         })
-    },[])
+    },[params.id])
     function handleCartItems(){
         alert('added')
         cartItems.push(product)
@@ -25,7 +25,7 @@ export function PreviewProduct(){
         <div className="container-fluid">
            <div className="row">
            <div className="col-4">
-            <img src={product.image} width={'200px'}/>
+            <img src={product.image} width={'200px'} alt="prod"/>
            </div>
            <div className="col-8">
             <h4>{product.title}</h4>

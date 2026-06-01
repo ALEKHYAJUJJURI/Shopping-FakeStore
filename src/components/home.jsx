@@ -18,8 +18,8 @@ export function Home(){
         })
     },[])
     return(
-        <div className="container-fluid" style={{'height':'100vh'}}>
-            <div className='' style={{'height':'200px'}}> 
+        <div className="container-fluid" style={{height:'100vh'}}>
+            <div className='' style={{height:'200px'}}> 
        <ImageCarousel style='ImageCarousel'
       images={images}
       showArrowButtons={true}
@@ -32,7 +32,7 @@ export function Home(){
             <div>
                 <select className="form-select">
                     {
-                        categories.map(item=><option key={item} value={item} style={{'color':'gray'}}>{item.toUpperCase()}</option>)
+                        categories.map(item=><option key={item} value={item} style={{color:'gray'}}>{item.toUpperCase()}</option>)
                     }
                 </select>
             </div>
@@ -40,15 +40,15 @@ export function Home(){
                 <button className="btn btn-danger">Sign Out</button>
             </div>
         </div>
-        <div className="d-flex flex-row justify-content-center flex-wrap overflow-auto" style={{'height':'500px'}}>
+        <div className="d-flex flex-row justify-content-center flex-wrap overflow-auto" style={{height:'500px'}}>
                     {
                         products.map(product=>
-                            <div className="card m-3" style={{'width':'250px'}} key={product.id}>
+                            <div className="card m-3" style={{width:'250px'}} key={product.id}>
                                 <div className="card-header">
                                 <h4>{product.title}</h4>    
                                 </div>
                                 <div className="card-body">
-                                <img src={product.image} width={'100px'}/>
+                                <img src={product.image} width={'100px'} alt="product"/>
                                 </div>
                                 <div className="card-footer">
                                     <p className="price">Price: <span>{product.price.toLocaleString("en-us", {style: "currency", currency: "USD"})}</span></p>
