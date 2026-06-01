@@ -51,7 +51,7 @@ export function Home(){
                                 <img src={product.image} width={'100px'} alt="product"/>
                                 </div>
                                 <div className="card-footer">
-                                    <p className="price">Price: <span>{product.price.toLocaleString("en-us", {style: "currency", currency: "USD"})}</span></p>
+                                    <p className="price">Price: <span>{product.price.toLocaleString("en-us", { currency: "USD"})}</span></p>
                                     <p className="text-light "><span className="bg-success rounded p-1">{product.rating.rate}<span className="bi bi-star-fill ms-1"></span><span className="bi bi-star-fill"></span><span className="bi bi-star-fill"></span><span className="bi bi-star-fill"></span><span className="bi bi-star-half"></span></span><span className="text-dark">[{product.rating.count}]</span></p>
                                     <Link to={`/product/${product.id}`} className="btn btn-warning bi bi-eye"></Link>
                                     <button className="btn btn-warning bi bi-cart-fill mx-2">Add To Cart</button>
