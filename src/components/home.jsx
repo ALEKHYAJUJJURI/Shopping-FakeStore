@@ -20,7 +20,7 @@ export function Home(){
     return(
         <div className="container-fluid" style={{height:'100vh'}}>
             <div className='' style={{height:'200px'}}> 
-       <ImageCarousel style='ImageCarousel'
+       <ImageCarousel
       images={images}
       showArrowButtons={true}
       showIndicators={true}
